@@ -1,10 +1,15 @@
+*{
+    margin:0;
+}
+
 h1{
     font-size: 6em;
-    color: red;
+    color:deeppink;
     font-family: serif;
     background-color: pink;
     font-style: italic;
     text-align: center;
+    margin:50px 0;
 }
 
 .inputs{
@@ -12,6 +17,7 @@ h1{
    flex-direction: column;
    justify-content: center;
    align-items: center;
+   margin: 50px 0;
 }
 
 input{
@@ -22,4 +28,21 @@ input{
     font-weight: bold;
     border:red solid 2px;
     color:crimson;
+}
+
+.centerdiv{
+    text-align: center;
+    margin: 30px;
+
+}
+
+.geral{
+    height: calc(100vh - 210.4px - 118.4px);
+}
+
+footer{
+    background-color:deeppink;
+    color:aliceblue;
+    padding: 50px;
+
 }
