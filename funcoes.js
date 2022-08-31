@@ -12,7 +12,8 @@ function sortNumeros(){
     i = i -1;
     }
 }
-console.log(numSort)
+document.getElementById("sorteados").innerHTML = numSort;
+contarAcertos();
 }
 
 function lerNumero(value, pos){
@@ -29,3 +30,12 @@ function lerNumero(value, pos){
     
 }
 
+function contarAcertos(){
+    let cont=0;
+    numEsco.forEach(function(value,index){
+        if(numSort.includes(value)){
+            cont=cont++;
+        }
+    })
+    document.getElementById("acertos").innerHTML = cont;
+}
