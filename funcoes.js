@@ -17,14 +17,15 @@ contarAcertos();
 }
 
 function lerNumero(value, pos){
+    let num = Number (value)
     if(value < 1){
         alert("Numero não pode ser zero ou negativo! Digite novamente!")
-    }else if(value > 60){
+    }else if(num > 60){
         alert("Numero não pode ser maior que 60! Digite novamente!")
-    }else if (numEsco.includes(value)){
+    }else if (numEsco.includes(num)){
         alert ("Numero repetido! Digite novamente!")
     }else{
-    numEsco[pos] = value
+    numEsco[pos] = num
     console.log(numEsco)
     }
     
