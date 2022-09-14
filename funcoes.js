@@ -12,20 +12,31 @@ function sortNumeros(){
     i = i -1;
     }
 }
-console.log(numSort)
+document.getElementById("sorteados").innerHTML = numSort;
+contarAcertos();
 }
 
 function lerNumero(value, pos){
-    if(value < 1){
+    let num = Number (value)
+    if(num < 1){
         alert("Numero não pode ser zero ou negativo! Digite novamente!")
-    }else if(value > 60){
+    }else if(num > 60){
         alert("Numero não pode ser maior que 60! Digite novamente!")
-    }else if (numEsco.includes(value)){
+    }else if (numEsco.includes(num)){
         alert ("Numero repetido! Digite novamente!")
     }else{
-    numEsco[pos] = value
+    numEsco[pos] = num
     console.log(numEsco)
     }
     
 }
 
+function contarAcertos(){
+    let cont=0;
+    numEsco.forEach(function(value,index){
+        if(numSort.includes(value)){
+            cont=cont +1;
+        }
+    })
+    document.getElementById("acertos").innerHTML = cont;
+}
