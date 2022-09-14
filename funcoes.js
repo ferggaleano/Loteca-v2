@@ -18,7 +18,7 @@ contarAcertos();
 
 function lerNumero(value, pos){
     let num = Number (value)
-    if(value < 1){
+    if(num < 1){
         alert("Numero não pode ser zero ou negativo! Digite novamente!")
     }else if(num > 60){
         alert("Numero não pode ser maior que 60! Digite novamente!")
@@ -35,7 +35,7 @@ function contarAcertos(){
     let cont=0;
     numEsco.forEach(function(value,index){
         if(numSort.includes(value)){
-            cont=cont++;
+            cont=cont +1;
         }
     })
     document.getElementById("acertos").innerHTML = cont;
